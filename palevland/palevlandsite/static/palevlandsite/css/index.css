@@ -1,3 +1,188 @@
-h1 {
-  color: blue;
+:root {
+  --main-color: #f7a809;
+  --cycle-time: 16s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+#main {
+  max-width: 1240px;
+  margin: 20px auto auto auto;
+}
+
+.content {
+  font-family: "Lato", Arial, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+h1.title {
+  font-family: "LatoBold", Arial, Tahoma, sans-serif;
+  font-size: 30px;
+}
+
+.paragraph, .text {
+  font-family: "Lato", Arial, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+.paragraph::before {
+  content: "";
+  margin-left: 20px;
+}
+
+.carpet-catalog {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.carpet-catalog__container {
+  width: 250px;
+}
+
+.carpet-catalog__container:not(:first-child) {
+  margin-left: 30px;
+}
+
+.carpet-catalog__image {
+  width: 100%;
+  height: 250px;
+  background-size: 100%;
+}
+
+.carpet-catalog__description {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.carp-size {
+  display: inline-block;
+}
+
+.carp-amount {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+input[type="text"], input[type="number"] {
+  height: 25px;
+  font-size: 16px;
+}
+
+.carpet-form__cm-w, .carpet-form__cm-h, carpet-form__amount {
+  width: 40px;
+}
+
+.carpet-form__total-text {
+  font-size: 1.1rem;
+}
+
+.carpet-form__submit {
+  display: block;
+  margin-top: 15px;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.carpet-form__submit:hover {
+  background-color: #c98906;
+}
+
+.carpet-catalog__image_york-br {
+  background-image: url('../images/carpets/york_br.jpg');
+}
+
+.carpet-catalog__image_york-gr {
+  background-image: url('../images/carpets/york_gr.jpg');
+}
+
+.carpet-catalog__image_york-bl {
+  background-image: url('../images/carpets/york_bl.jpg');
+}
+
+.carpet-catalog__image_york-br:hover {
+  background-image: url('../images/carpets/york_br_hover.jpg');
+}
+
+.carpet-catalog__image_york-gr:hover {
+  background-image: url('../images/carpets/york_gr_hover.jpg');
+}
+
+.carpet-catalog__image_york-bl:hover {
+  background-image: url('../images/carpets/york_bl_hover.jpg');
+}
+
+.carpet-catalog__image_nova-br {
+  background-image: url('../images/carpets/nova_br.jpg');
+}
+
+.carpet-catalog__image_nova-gr {
+  background-image: url('../images/carpets/nova_gr.jpg');
+}
+
+.carpet-catalog__image_nova-bl {
+  background-image: url('../images/carpets/nova_bl.jpg');
+}
+
+.carpet-catalog__image_nova-br:hover, .carpet-catalog__image_nova-gr:hover, .carpet-catalog__image_nova-bl:hover {
+  background-image: url('../images/carpets/nova_hover.jpg');
+}
+
+.carpet-catalog__image_carp-br {
+  background-image: url('../images/carpets/carp_br.jpg');
+}
+
+.carpet-catalog__image_carp-gr {
+  background-image: url('../images/carpets/carp_gr.jpg');
+}
+
+.carpet-catalog__image_carp-bl {
+  background-image: url('../images/carpets/carp_bl.jpg');
+}
+
+.carpet-catalog__image_carp-br:hover {
+  background-image: url('../images/carpets/carp_br_hover.jpg');
+}
+
+.carpet-catalog__image_carp-gr:hover {
+  background-image: url('../images/carpets/carp_gr_hover.jpg');
+}
+
+.carpet-catalog__image_carp-bl:hover {
+  background-image: url('../images/carpets/carp_bl_hover.jpg');
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+#footer {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer__text {
+  text-align: center;
 }

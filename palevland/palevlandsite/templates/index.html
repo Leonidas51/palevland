@@ -5,11 +5,128 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'palevlandsite/css/index.css' %}">
+        <script src="{% static 'palevlandsite/js/carpets_form.js' %}"></script>
+        <title>Входные ковры</title>
     </head>
     <body>
       {% csrf_token %}
-      <div id="main">
-        <h1>hi my name is Winston</h1>
+    <div id="main">
+      <div class="content">
+        <h1 class="title">Входные ковры</h1>
+    <p><b>Ворсовые ковры по индивидуальным размерам</b></p>
+    <p>Изготовление грязезащитных, ворсовых ковров на резиновой основе по индивидуальному заказу. Покрытия <b>«Nova Nop», «York»</b>, окантовка, нанесение логотипа. Мы изготовим сразу пару ковров каждого вида для экспресс-замены. </p>
+    <h1 class="title">Всегда чистый ковёр</h1>
+    <p><b>Пока один ковёр защищает Ваше помещение, второй проходит качественную очистку на нашем оборудовании. В случае необходимости изготавливается следующий экземпляр ковра. Замена производится один раз в неделю.</b></p>
+    <p>Ваш грязезащитный ковёр может стать элементом общего дизайна помещения, ведь его цвет, форму и размеры вы выбираете самостоятельно. Вы также можете <a href="http://logomat.ru/">разместить логотип компании</a> на его поверхности. Для этого мы используем лучшее европейское оборудование и материалы. </p>
+    <h1 class="title">Грязезащитный ворсовый ковер «York»</h1>
+    <p>Страна происхождения: Нидерланды</p>
+
+    <div class="carpet-catalog">
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_york-br"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «York» коричневый<br />Толщина: 6,2 мм</div>
       </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_york-gr"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «York» серый<br />Толщина: 6,2 мм</div>
+      </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_york-bl"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «York» чёрный<br />Толщина: 6,2 мм</div>
+      </div>
+    </div>
+
+    <p>Готовые входные влаговпитывающие ковры из высококачественного грязезащитного материала. Ковры окантованы специальным кантом.</p>
+    <p>Великолепно защитят Ваше помещение от влаги, снега и грязи. Обладают высокой износостойкостью и прослужат очень долго, сохраняя привлекательный внешний вид. При необходимости, мы изготовим новый комплект ковров.</p>
+    <p>Прекрасно подойдут для небольших офисов, коттеджей, тамбуров, квартир и других помещений с небольшой проходимостью.</p>
+    <p>Рулонное покрытие York может использоваться как в роли ковролина, так и как обычное входное грязезащитное покрытие. Благодаря ворсу, ковры обладают отличными впитывающими свойствами, а подложка препятствует скольжению ковра. Таким образом, ковры позволяют Вам оформить вход в помещение, сократив при этом расходы на уборку.</p>
+    
+    <h1 class="title">Грязезащитные ковры «Nova Nop»</h1>
+    <p><b>Грязезащитные ковры «Nova Nop»</b> сделаны из высококачественного жесткого волокна с подложкой из синтетического латекса, произведены также в Нидерландах. Ковры «Nova Nop» предназначены для входных групп с большой пропускной способностью и особо устойчивы к стиранию и износу.</p>
+    <div class="carpet-catalog">
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_nova-br"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «Nova Nop» коричневый<br />Толщина: 8 мм</div>
+      </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_nova-gr"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «Nova Nop» серый<br />Толщина: 8 мм</div>
+      </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_nova-bl"></div>
+        <div class="carpet-catalog__description">Грязезащитный ворсовый ковер «Nova Nop» чёрный<br />Толщина: 8 мм</div>
+      </div>
+    </div>
+
+    <h1 class="title">Калькулятор стоимости</h1>
+
+
+    <form id="carpet-form" method="post">
+        <div class="carpet-form__carpet" id="carpet-1">
+        <div>
+          <span>Выбор типа покрытия</span>
+          <label>
+            <input class="carpet-form__type" name="1-type" type="radio" checked="checked" value="York">
+            <span>York</span>
+          </label>
+
+          <label>
+            <input class="carpet-form__type" name="1-type" type="radio" value="NovaNop">
+            <span>Nova Nop</span>
+          </label>
+        </div>
+        <div class="carp-size">
+          <p>Размер ковра</p>
+          <input class="carpet-form__cm-w" name="1-size-w" type="text" placeholder="см" required=""><span> X </span><input class="carpet-form__cm-h" name="1-size-h" type="text" placeholder="см" required="">
+        </div>
+        <div class="carp-amount">
+          <p>Количество</p>
+          <input class="carpet-form__amount" name="1-amount" type="number" min="1" value="1">
+        </div>
+        <p>Итого в месяц: <span class="carpet-form__carpet-total" id="1-total">0</span>р</p>
+      </div>
+      <a href="#" id="carpet-form__add-more">+ Добавить другой размер ковра</a>
+      <p class="carpet-form__total-text"><b>Всего: <span id="carpet-form__total">0</span>р</b></p>
+      <input type="text" name="name" placeholder="Имя" required="">
+      <input type="text" name="phone" placeholder="Телефон" required="">
+      <input type="text" name="email" placeholder="Электронная почта" required="">
+
+
+      <a><input class="carpet-form__submit" type="submit" value="Отправить заявку менеджеру"></a>
+    </form>
+
+
+    <p><b>Мы своевременно заменим Ваш ковёр на аналогичный и обеспечим его качественную очистку от загрязнений.</b></p>
+    <p><b>В случае оформления заявки на сайте, мы в течении 7 рабочих дней готовы привезти к вам новый ковёр.</b></p>
+    <p><b>Возможен выезд замерщика.</b></p>
+  
+    <h1 class="title">Размерные ворсовые грязезащитные коврики</h1>
+    <p>Мы хотим предложить нашим клиентам грязезащитные ворсовые коврики - это долговечные, сверхстойкие грязезащитные покрытия из петельчатого волокна со стеганным ворсом на прочной резиновой основе.</p>
+    <p>Ворсовые грязезащитные коврики применяются в помещениях с небольшим потоком посетителей.</p>
+
+    <div class="carpet-catalog">
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_carp-br"></div>
+        <div class="carpet-catalog__description">Коврик придверный коричневый</div>
+      </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_carp-gr"></div>
+        <div class="carpet-catalog__description">Коврик придверный серый</div>
+      </div>
+      <div class="carpet-catalog__container">
+        <div class="carpet-catalog__image carpet-catalog__image_carp-bl"></div>
+        <div class="carpet-catalog__description">Коврик придверный черный</div>
+      </div>
+    </div>
+    <p>Размер: 40*60 см Толщина: 6,2 мм <b>190 руб за шт.</b></p>
+    <p>Размер: 60*90 см Толщина: 6,2 мм <b>390 руб за шт.</b></p>
+    <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v4LM8puT-PU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>    
+  </div>
+      <div id="footer">
+        <div class="footer__text">г. Москва, ул. Кольская д. 7, с. 8 | +7 (495) 600-39-89 | +7 (495) 504-75-26 | info@palev.ru</div>
+      </div>
+    </div>
     </body>
 </html>
